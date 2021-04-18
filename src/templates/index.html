@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cari restoran dimanapun dan kapanpun kamu berada dengan beragam menu yang tersedia">
     
     <title>Food Hunter</title>
 
@@ -12,24 +13,52 @@
 
 </head>
 <body>
+    <a href="#content" class="skip-link">Menuju ke konten</a>
     <header class="header">
-        <h1 class="header__title">Food Hunter</h1>
+        <div class="header__container">
+            <h1 class="header__title">Resto Hunter</h1>
+            <a id="hamburger" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__item"><a href="/">Home</a></li>
+                    <li class="header__nav__item"><a href="#">Favorite</a></li>
+                    <li class="header__nav__item"><a href="https://github.com/kido1611" target="_blank" rel="noopener">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-
+    
+    <nav id="sidenav" class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="/">Home</a></li>
+            <li class="nav__item"><a href="#">Favorite</a></li>
+            <li class="nav__item"><a href="https://github.com/kido1611" target="_blank">About Us</a></li>
+        </ul>
     </nav>
-    <main>
 
+    <div class="hero">
+        <div class="hero__container">
+            <h1 class="hero__title">
+                Temukan restoran terbaik disekitarmu
+            </h1>
+            <h2 class="hero__subtitle">
+                Cari restoran dimanapun dan kapanpun kamu berada dengan beragam menu yang tersedia
+            </h2>
+        </div>
+    </div>
+    <main id="content">
+        <section class="restaurant">
+            <h1 class="restaurant__title">Daftar Restoran</h1>
+            <div class="restaurant__list">
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer id="footer">
+        &copy; 2021 Resto Hunter
     </footer>
-<!-- <h1>Restaurant Apps Starter Project</h1>
-<p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-<p>Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai background hero elemen</p>
-<img src="./images/heros/hero-image_1.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_3.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_4.jpg" width="450" alt=""> -->
 </body>
 </html>
