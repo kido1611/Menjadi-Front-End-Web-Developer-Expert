@@ -1,25 +1,21 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import './restaurant-item';
-import data from '../DATA.json';
+import '../styles/loader.css';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-const hamburgerButtonElement = document.querySelector('#hamburger');
-const drawerElement = document.querySelector('#sidenav');
-
-hamburgerButtonElement.addEventListener('click', (event) => {
-  drawerElement.classList.toggle('open');
-  event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('#sidenav'),
+  hero: document.querySelector('#hero'),
+  content: document.querySelector('#content'),
 });
 
-const restaurantList = document.querySelector('.restaurant__list');
-data.restaurants.forEach((restaurant) => {
-  const element = document.createElement('restaurant-item');
-  element.setAttribute('id', restaurant.id);
-  element.setAttribute('name', restaurant.name);
-  element.setAttribute('picture', restaurant.pictureId);
-  element.setAttribute('location', restaurant.city);
-  element.setAttribute('rating', restaurant.rating);
-  element.setAttribute('description', restaurant.description);
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-  restaurantList.appendChild(element);
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
 });

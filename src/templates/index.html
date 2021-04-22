@@ -6,26 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cari restoran dimanapun dan kapanpun kamu berada dengan beragam menu yang tersedia">
     
-    <title>Food Hunter</title>
+    <meta name="theme-color" content="#d92027"/>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="icon" href="favicon.png">
+
+    <title>Resto Hunter</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
 </head>
 <body>
     <a href="#content" class="skip-link">Menuju ke konten</a>
     <header class="header">
         <div class="header__container">
             <h1 class="header__title">Resto Hunter</h1>
-            <a id="hamburger" href="#">
+            <button id="hamburger" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-            </a>
+            </button>
             <nav class="header__nav">
                 <ul class="header__nav__list">
-                    <li class="header__nav__item"><a href="/">Home</a></li>
-                    <li class="header__nav__item"><a href="#">Favorite</a></li>
+                    <li class="header__nav__item"><a href="#/">Home</a></li>
+                    <li class="header__nav__item"><a href="#/favorite">Favorite</a></li>
                     <li class="header__nav__item"><a href="https://github.com/kido1611" target="_blank" rel="noopener">About Us</a></li>
                 </ul>
             </nav>
@@ -34,29 +40,14 @@
     
     <nav id="sidenav" class="nav">
         <ul class="nav__list">
-            <li class="nav__item"><a href="/">Home</a></li>
-            <li class="nav__item"><a href="#">Favorite</a></li>
+            <li class="nav__item"><a href="#/">Home</a></li>
+            <li class="nav__item"><a href="#/favorite">Favorite</a></li>
             <li class="nav__item"><a href="https://github.com/kido1611" target="_blank">About Us</a></li>
         </ul>
     </nav>
 
-    <div class="hero">
-        <div class="hero__container">
-            <h1 class="hero__title">
-                Temukan restoran terbaik disekitarmu
-            </h1>
-            <h2 class="hero__subtitle">
-                Cari restoran dimanapun dan kapanpun kamu berada dengan beragam menu yang tersedia
-            </h2>
-        </div>
-    </div>
-    <main id="content">
-        <section class="restaurant">
-            <h1 class="restaurant__title">Daftar Restoran</h1>
-            <div class="restaurant__list">
-            </div>
-        </section>
-    </main>
+    <div id="hero"></div>
+    <main id="content"></main>
     <footer id="footer">
         &copy; 2021 Resto Hunter
     </footer>

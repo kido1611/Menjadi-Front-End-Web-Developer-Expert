@@ -1,5 +1,6 @@
 class RestaurantItem extends HTMLElement {
   connectedCallback() {
+    this.id = this.getAttribute('id') || null;
     this.name = this.getAttribute('name') || null;
     this.pictureUrl = this.getAttribute('picture') || null;
     this.location = this.getAttribute('location') || null;
@@ -17,7 +18,7 @@ class RestaurantItem extends HTMLElement {
             </div>
             <div class="restaurant__item__data">
                 <h1 class="restaurant__item__name">
-                    <a href="#">${this.name}</a>
+                    <a href="#/detail/${this.id}">${this.name}</a>
                 </h1>
                 <div class="restaurant__item__city">
                     <svg xmlns="http://www.w3.org/2000/svg" class="restaurant__item__city__icon" viewBox="0 0 20 20" fill="currentColor">
