@@ -410,12 +410,13 @@ textarea.input__text{
 }
 
 .submit__button {
-    padding: .8rem 1.25rem;
+    padding: .9rem 1.25rem;
     background: var(--primary);
     cursor: pointer;
     border: 0;
     color: var(--onPrimary);
     border-radius: .25rem;
+    font-size: 1rem;
 }
 
 .submit__button:hover{
