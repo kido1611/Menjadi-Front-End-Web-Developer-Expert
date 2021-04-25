@@ -470,6 +470,7 @@ textarea.input__text{
     .restaurant__detail__overview__image {
         width: 40%;
         flex-grow: 0;
+        flex-shrink: 0;
     }
 
     .restaurant__detail__overview__data {
@@ -508,6 +509,8 @@ textarea.input__text{
 
     .restaurant__detail__overview__image {
         width: 30%;
+        flex-grow: 0;
+        flex-shrink: 0;
     }
 }
 

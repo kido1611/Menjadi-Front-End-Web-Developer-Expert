@@ -1,7 +1,6 @@
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import '../components/restaurant-item';
 import '../components/empty-list';
-import CONFIG from '../../globals/config';
 
 const Favorite = {
   async render() {
@@ -26,7 +25,7 @@ const Favorite = {
         const element = document.createElement('restaurant-item');
         element.setAttribute('id', restaurant.id);
         element.setAttribute('name', restaurant.name);
-        element.setAttribute('picture', CONFIG.BASE_IMAGE_URL(restaurant.pictureId));
+        element.setAttribute('picture', restaurant.pictureId);
         element.setAttribute('location', restaurant.city);
         element.setAttribute('rating', restaurant.rating);
         element.setAttribute('description', restaurant.description);

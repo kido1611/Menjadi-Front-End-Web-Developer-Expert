@@ -2,7 +2,14 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant__detail__overview">
-    <img class="rounded restaurant__detail__overview__image lazyload" data-src="${CONFIG.BASE_IMAGE_URL(restaurant.pictureId)}" alt="${restaurant.name}" />
+    <div class="restaurant__detail__overview__image">
+      <picture>
+        <source media="(max-width: 639px)" srcset="${CONFIG.BASE_IMAGE_SMALL_URL(restaurant.pictureId)}">
+        <img class="rounded lazyload" 
+          data-src="${CONFIG.BASE_IMAGE_MEDIUM_URL(restaurant.pictureId)}" 
+          alt="${restaurant.name}" />
+      </picture>
+    </div>
     <div class="restaurant__detail__overview__data">
       <h1 class="restaurant__detail__title">${restaurant.name}</h1>
       <div class="restaurant__detail__star__container"></div>
