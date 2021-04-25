@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0",
+    "build-image": "node sharp.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
     "lint": "eslint ./src"
@@ -32,6 +33,7 @@
     "karma-jasmine": "^3.3.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
+    "sharp": "^0.28.1",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.1",
     "webpack": "^4.43.0",
@@ -41,6 +43,7 @@
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
+    "file-loader": "^6.2.0",
     "idb": "^6.0.0",
     "regenerator-runtime": "^0.13.5",
     "serviceworker-webpack-plugin": "^1.0.1"

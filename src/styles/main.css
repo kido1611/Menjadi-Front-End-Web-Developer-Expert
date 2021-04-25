@@ -117,7 +117,7 @@ img {
 }
 
 .hero__item{
-    background: url('../public/images/heros/hero-image_2.jpg');
+    background: url('/images/hero-responsive/hero-image_2-small.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -444,6 +444,12 @@ textarea.input__text{
 
     .hero__container{
         min-height: 65vh;
+    }
+
+    .hero__item{
+        background: url('/images/hero-responsive/hero-image_2-large.jpg');
+        background-position: center;
+        background-size: cover;
     }
 
     .restaurant__list{
