@@ -20,7 +20,7 @@ class EmptyList extends HTMLElement {
           </g>
         </svg>
       </div>
-      <div class="text-center">Huhuhu... daftar kosong</div>
+      <div class="empty-message">Huhuhu... daftar kosong</div>
     </div>
     `;
   }
