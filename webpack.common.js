@@ -66,8 +66,6 @@ module.exports = {
         }),
       ],
     }),
-    new BundleAnalyzerPlugin(),
-    new CleanWebpackPlugin(),
     new WebpackPwaManifest({
       name: 'Resto Hunter',
       short_name: 'Resto',
