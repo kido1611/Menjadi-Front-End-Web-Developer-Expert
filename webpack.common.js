@@ -4,8 +4,6 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
