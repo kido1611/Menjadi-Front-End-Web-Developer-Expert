@@ -6,6 +6,7 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -46,7 +47,10 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/heros/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: [
+              '**/images/heros/**',
+              '**/icons/**',
+            ], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
           },
         },
       ],
@@ -64,5 +68,36 @@ module.exports = {
     }),
     new BundleAnalyzerPlugin(),
     new CleanWebpackPlugin(),
+    new WebpackPwaManifest({
+      name: 'Resto Hunter',
+      short_name: 'Resto',
+      orientation: 'portrait',
+      description: 'Cari restoran dimanapun dan kapanpun kamu berada dengan beragam menu yang tersedia',
+      background_color: '#ffffff',
+      theme_color: '#d92027',
+      display: 'standalone',
+      inject: true,
+      ios: true,
+      icons: [
+        {
+          src: path.resolve('src/public/icons/icon-512x512.png'),
+          sizes: [72, 96, 128, 144, 152, 192, 256, 384, 512],
+          purpose: 'any maskable',
+          destination: path.join('icons'),
+        },
+        {
+          src: path.resolve('src/public/icons/icon-512x512.png'),
+          size: 192,
+          destination: path.join('icons', 'ios'),
+          ios: true,
+        },
+        {
+          src: path.resolve('src/public/icons/icon-512x512.png'),
+          size: 192,
+          destination: path.join('icons', 'ios'),
+          ios: 'startup',
+        },
+      ],
+    }),
   ],
 };
